@@ -12,10 +12,10 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) month - name of the month to filter by, "none" or "all" to apply no month filter
+        (str) day - name of the day of week to filter by, "none" or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello dear! exploring data is so much fun, Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
       city = input("Which city would you like to see data for: Chicago, New York, or Washington?\n").title()
@@ -32,13 +32,13 @@ def get_filters():
         continue
       else:
         break
-        
-    #Skip user input if none picked    
+
+    #Skip user input if none picked
     if filters != 'None':
-        
+
       #Apply condition for date filter preference
       if filters != 'Day':
-        # TO DO: get user input for month (all, january, february, ... , june)    
+        # TO DO: get user input for month (all, january, february, ... , june)
         while True:
           month = input("\nWhich month would you like to filter by? months available (January, February, March, April, May, June) or type 'all' to see all or type 'none' if you don't want to apply filter. \n").title()
           if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'All', 'None'):
@@ -48,8 +48,8 @@ def get_filters():
             break
       else:
           month = 'All'
-       
-        
+
+
 
       #Apply condition for date filter preference
       if filters != 'Month':
@@ -66,9 +66,9 @@ def get_filters():
     else:
         day = 'All'
         month = 'All'
-        
-        
-        
+
+
+
     print('-'*40)
     return city, month, day
 
@@ -165,7 +165,7 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     combine_stations = df.groupby(['Start Station','End Station']).count()
     print('Most frequent start station and end station trips are: ', popular_start_station, " & ", popular_end_station)
-       
+
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -181,7 +181,7 @@ def trip_duration_stats(df):
     # TO DO: display total travel time
     total_travel_time = sum(df['Trip Duration'])
     print('Total travil time: ', total_travel_time)
-    
+
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Mean travil time: ', mean_travel_time)
@@ -231,8 +231,8 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-def raw_data(df):   
+
+def raw_data(df):
   """Display 5 of raw data a time if the user wants and keep going 5 by 5 until the user stop it. """
   count = 0
   answer = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
@@ -253,8 +253,8 @@ def main():
         #Set all user filters into the variables then load data as per filters
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
-        #Run all functions to show filtered data        
+
+        #Run all functions to show filtered data
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
@@ -262,7 +262,7 @@ def main():
         raw_data(df)
 
         #Find out if user want to restart the program or stop it then do the action
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to re-explore again and pick different answers? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
