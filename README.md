@@ -8,7 +8,10 @@ Explore US bikeshare data
 Use Paython coding skills I have learned and practice to understand U.S. bikeshare data, preform calculations and build interactive data for the user.
 
 ### Files used
-Include the files used
+3 files of bikeshare raw data used:
+1- washington.csv
+2- new_york_city.csv
+3- chicago.csv
 
 ### Credits
 Credit to Mr. Islam Hisham from Udacity and to Udacity team for all great lessons and effort to help us learn, great job!
