@@ -5,10 +5,10 @@ ReadMe file to include discerption, 3 csv files having the raw data, gitignore f
 Explore US bikeshare data
 
 ### Description
-Describe what your project is about and what it does
+Use Paython coding skills I have learned and practice to understand U.S. bikeshare data, preform calculations and build interactive data for the user.
 
 ### Files used
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Credit to Mr. Islam Hisham from Udacity and to Udacity team for all great lessons and effort to help us learn, great job!
