@@ -262,7 +262,7 @@ def main():
         raw_data(df)
 
         #Find out if user want to restart the program or stop it then do the action
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to re-explore again and pick different answers? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
